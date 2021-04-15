@@ -34,7 +34,8 @@ $(call inherit-product, vendor/dot/config/common.mk)
 DOT_OFFICIAL=true
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 720
-
+WITH_OPLAUNCHER=true
+TARGET_INCLUDE_PIXEL_CHARGER := true
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
 PRODUCT_NAME := dot_ysl
