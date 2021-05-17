@@ -28,16 +28,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 $(call inherit-product, device/xiaomi/ysl/device.mk)
 
 # Inherit some common ssos stuff.
-$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
+$(call inherit-product, vendor/descendant/config/common_full_phone.mk)
 
 # Inherit some common ssos flags
-SSOS_BUILD_TYPE := OFFICIAL
+#SSOS_BUILD_TYPE := OFFICIAL
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
-PRODUCT_NAME := ssos_ysl
+PRODUCT_NAME := descendant_ysl
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi S2
