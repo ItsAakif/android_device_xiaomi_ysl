@@ -28,16 +28,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_system_ext.mk)
 $(call inherit-product, device/xiaomi/ysl/device.mk)
 
 # Inherit some common ssos stuff.
-$(call inherit-product, vendor/ssos/config/common_full_phone.mk)
+$(call inherit-product, vendor/palladium/config/common_full_phone.mk)
 
 # Inherit some common ssos flags
 SSOS_BUILD_TYPE := OFFICIAL
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_BOOT_ANIMATION_RES := 720
 
+#PALLADIUM-PROPS
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.palladiumdevice.maintainer=MiDoNaSR \
+    ro.palladiumdevice.cpu=SD625 \
+    ro.palladiumdevice.display=5.99 \
+    ro.palladiumdevice.displaytype=LCD \
+    ro.palladiumdevice.battery=3080mAh \
+    ro.palladiumdevice.camera=12MP
+
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ysl
-PRODUCT_NAME := ssos_ysl
+PRODUCT_NAME := palladium_ysl
 BOARD_VENDOR := Xiaomi
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi S2
